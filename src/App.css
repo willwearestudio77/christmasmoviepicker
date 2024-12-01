@@ -16,10 +16,47 @@ form{
 
 }
 body{
-  width: 100%;
+  width:70vw;
+  margin: 0 auto;
   height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+.movie-card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #C4D7D2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  margin: 0 auto;
+}
+img{
+  max-width: 100px;
+}
+.recommendations{
+  display: flex;
+flex-direction: column;
+gap:20px;
+margin-top:20px;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #C4D7D2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom:20px;
 }

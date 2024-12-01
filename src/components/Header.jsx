@@ -1,7 +1,10 @@
 
 function Header() {
   return (
-    <div>Header</div>
+    <div className="header">
+      <h1>Christmas Movie Picker</h1>
+      {/* <Button variant="contained">RECCOMENDATIONS</Button> */}
+    </div>
   )
 }
 

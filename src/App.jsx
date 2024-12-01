@@ -14,7 +14,6 @@ function App() {
         <Form  />
       </div>
       <div className="movies-container">
-        {/* <Movies /> */}
         <Recommendations />
       </div>
       <Footer />
