@@ -22,7 +22,7 @@ export default function Form() {
             {errors.email && <span>This field is required</span>}
             <select type="select" {...register("time")} >
                 <option value="60">Less than 60 minutes</option>
-                <option value="120">1 to 2 hours</option>
+                <option value="120">Up to 2 hours</option>
                 <option value="400">Over 2 hours</option>
             </select>
             <select type="select" {...register("moviecertificate")} >
@@ -33,13 +33,25 @@ export default function Form() {
                 <option value="18">18</option>
             </select>
             <select type="select" {...register("genre")} >
-                <option value="Action">Action</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Drama">Drama</option>
-                <option value="Horror">Horror</option>
-                <option value="Romance">Romance</option>
-                <option value="Sci-Fi">Sci-Fi</option>
-                <option value="Thriller">Thriller</option>
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="16">Animation</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="99">Documentary</option>
+                <option value="18">Drama</option>
+                <option value="10751">Family</option>
+                <option value="14">Fantasy</option>
+                <option value="36">History</option>
+                <option value="27">Horror</option>
+                <option value="10402">Music</option>
+                <option value="9648">Mystery</option>
+                <option value="10749">Romance</option>
+                <option value="878">Sci-Fi</option>
+                <option value="53">Thriller</option>
+                <option value="10752">War</option>
+                <option value="37">Western</option>
+                
             </select>
             <input type="submit" />
         </form>
