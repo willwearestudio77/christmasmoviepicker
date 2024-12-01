@@ -2,9 +2,8 @@ import './App.css'
 import Footer from './components/Footer'
 import Form from './components/Form'
 import Header from './components/Header'
-import Recommendations from './components/Recommendations.Jsx'
 import { MovieProvider } from './components/State'
-
+import Recommendations from './components/Recommendations'
 function App() {
 
   return (
