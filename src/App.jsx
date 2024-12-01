@@ -1,14 +1,10 @@
-import ApiCall from "./components/apicall";
-import Age from "./components/Age";
-import Time from "./components/Time";
+import CombinedSearch from "./components/CombinedSearch";
 
 function App() {
   return (
     <div>
-      <h1>Welcome to the Pickr</h1>
-      <ApiCall />
-      <Age />
-      <Time />
+      <h1>Welcome to the Movie Picker</h1>
+      <CombinedSearch />
     </div>
   );
 }
