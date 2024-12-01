@@ -22,3 +22,28 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+.movies-container {
+  max-width: 200px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 50%; /* Makes the card circular */
+  padding: 20px;
+  background-image: url("https://example.com/wreath.png"); /* Replace with your wreath image URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+}
+
+.movie-card img {
+  max-width: 80%; /* Makes the image fit inside the circular card */
+  border-radius: 10px; /* Optional: Adds rounded corners to the poster */
+}
+
+.movie-card h2 {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #fff; /* White text for a festive look */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+}

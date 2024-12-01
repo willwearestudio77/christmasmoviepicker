@@ -12,11 +12,12 @@ function Recommendations() {
     <div className="recommendations">
       {movies.results.map((movie) => (
         <div key={movie.id} className="movie-card">
-          <h2>{movie.title}</h2>
+          <h2 className="movie-title">{movie.title}</h2>
           {movie.poster_path ? (
             <img
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}
+              className="movie-poster"
             />
           ) : (
             <p>No image available</p>
