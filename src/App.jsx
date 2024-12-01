@@ -1,14 +1,20 @@
-import { useState } from 'react';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
+import Form from './Form';
+import Reccomendations from './Reccomendations';
+import Reccomendation from './Reccomendation'
 
 function App() {
   return (
     <>
       <Header />
 
-      <p>filler text</p>
+      <Form />
+
+      <Reccomendations />
+
+      <Reccomendation />
 
       <Footer />
     </>
