@@ -2,9 +2,9 @@ import React from 'react';
 
 function Footer() {
   return (
-    <React.Fragment>
+    <div>
       <p>created by William, David and Robin</p>
-    </React.Fragment>
+    </div>
   );
 }
 

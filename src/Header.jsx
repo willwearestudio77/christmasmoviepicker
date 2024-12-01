@@ -2,9 +2,9 @@ import React from 'react';
 
 function Header() {
   return (
-    <React.Fragment>
+  <div>
       <h1>Christmas Movie Picker</h1>
-    </React.Fragment>
+  </div>
   );
 }
 
