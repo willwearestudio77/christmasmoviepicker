@@ -1,8 +1,12 @@
 import { useForm } from "react-hook-form";
-
+import fetchMovies from '../functions/searcher';
 export default function Form() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        fetchMovies(data);
+    };
+    
 
     console.log(watch("example")); // watch input value by passing the name of it
 
@@ -11,16 +15,15 @@ export default function Form() {
         <form onSubmit={handleSubmit(onSubmit)}>
             <label>Name</label>
             <input type="text" {...register("name")} />
-
             {/* include validation with required or other standard HTML validation rules */}
             <label>Email</label>
             <input type="email" {...register("email", { required: true })} />
             {/* errors will return when field validation fails  */}
             {errors.email && <span>This field is required</span>}
             <select type="select" {...register("time")} >
-                <option value=">60">Less than 60 minutes</option>
-                <option value="1-2">1 to 2 hours</option>
-                <option value="2+">Over 2 hours</option>
+                <option value="60">Less than 60 minutes</option>
+                <option value="120">1 to 2 hours</option>
+                <option value="400">Over 2 hours</option>
             </select>
             <select type="select" {...register("moviecertificate")} >
                 <option value="U">U</option>
