@@ -1,29 +1,25 @@
 import './App.css'
-// import { useState } from 'react'
 import Footer from './components/Footer'
 import Form from './components/Form'
 import Header from './components/Header'
-// import fetchMovies from './functions/searcher'
-function App() {
-  // const [movies, setMovies] = useState([]);
+import Recommendations from './components/Recommendations.Jsx'
+import { MovieProvider } from './components/State'
 
-  // const handleSearch = async () => {
-  //   const data = await fetchMovies();
-  //   setMovies(data);
-  // };
+function App() {
 
   return (
     <>
+    <MovieProvider>
       <Header />
       <div className="form-container">
-        <Form />
-        {/* <button onClick={handleSearch}>Search</button> */}
+        <Form  />
       </div>
       <div className="movies-container">
-  
-
+        {/* <Movies /> */}
+        <Recommendations />
       </div>
       <Footer />
+      </MovieProvider>
     </>
   );
 }

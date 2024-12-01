@@ -1,6 +1,5 @@
 
 
-
 export default async function fetchMovies(data) {
     const url = `https://api.themoviedb.org/3/discover/movie?certification=${data.moviecertificate}&certification.gte=${data.moviecertificate}&certification.lte=${data.moviecertificate}&certification_country=GB&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_keywords=207317&with_runtime.lte=${data.time}&with_genres=${data.genre}`;
 const options = {
