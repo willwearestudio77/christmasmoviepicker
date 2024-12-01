@@ -22,7 +22,7 @@ export default function Form() {
             {errors.email && <span>This field is required</span>}
             <select type="select" {...register("time")} >
                 <option value="60">Less than 60 minutes</option>
-                <option value="120">1 to 2 hours</option>
+                <option value="120">Up to 2 hours</option>
                 <option value="400">Over 2 hours</option>
             </select>
             <select type="select" {...register("moviecertificate")} >
