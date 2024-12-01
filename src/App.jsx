@@ -1,5 +1,6 @@
 import ApiCall from "./components/apicall";
 import Age from "./components/Age";
+import Time from "./components/Time";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <h1>Welcome to the Pickr</h1>
       <ApiCall />
       <Age />
+      <Time />
     </div>
   );
 }
