@@ -1,8 +1,9 @@
-
 function Header() {
   return (
-    <div>Header</div>
-  )
+  <div>
+      <h1>Christmas Movie Picker</h1>
+  </div>
+  );
 }
 
-export default Header
+export default Header;
