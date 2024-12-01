@@ -1,9 +1,9 @@
 function Header() {
   return (
-  <div>
+    <div className="header">
       <h1>Christmas Movie Picker</h1>
-  </div>
-  );
+      {/* <Button variant="contained">RECCOMENDATIONS</Button> */}
+    </div>
+  )
 }
-
 export default Header;
