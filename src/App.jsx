@@ -3,14 +3,16 @@ import Footer from './components/Footer'
 import Form from './components/Form'
 import Header from './components/Header'
 function App() {
-
   return (
     <>
+    <body>
       <Header />
-      <body>
+
+      <div className="form-container">
       <Form />
-      </body>
+      </div>
       <Footer />
+      </body>
     </>
   )
 }
