@@ -29,7 +29,7 @@ function Recommendations() {
   }
 
   return (
-    <div className="recommendations max-w-screen-sm m-auto flex flex-col gap-10">
+    <div className="recommendations max-w-screen-sm m-auto flex flex-col gap-10 p-10">
       {page > 1 && (
         <button className="btn btn-primary" onClick={() => paginateFunction(page - 1)}>
           Previous
