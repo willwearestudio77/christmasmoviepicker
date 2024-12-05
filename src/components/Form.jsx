@@ -4,15 +4,18 @@ import { MovieContext } from "./State";
 import FetchMovies from "../functions/Searcher";
 export default function Form() {
     const { register, handleSubmit } = useForm();
-    const { setMovies,setLoading,loading,setPage,setError,error,totalPages,setTotalPages } = useContext(MovieContext);
+    const { setMovies,setLoading,loading,setPage,setError,setTotalPages,page,request,setRequest } = useContext(MovieContext);
 
-    const onSubmit = data => {
+    const onSubmit = (data) => {
+        console.log(data);
+        setRequest(data);
         setLoading(true);
         setPage(1);
         setError(null);
         console.log(data);
-        FetchMovies(data)
+        FetchMovies(data,page)
             .then(movies => {
+                console.log(request);
             setMovies(movies);
             setTotalPages(movies.total_pages);
             setLoading(false);
