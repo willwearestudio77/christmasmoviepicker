@@ -1,41 +1,45 @@
 import { useForm } from "react-hook-form";
-import fetchMovies from '../functions/Searcher.jsx';
 import { useContext } from "react";
 import { MovieContext } from "./State";
-
+import FetchMovies from "../functions/Searcher";
 export default function Form() {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const { setMovies } = useContext(MovieContext);
+    const { register, handleSubmit } = useForm();
+    const { setMovies,setLoading,loading,setPage,setError,error,totalPages,setTotalPages } = useContext(MovieContext);
 
     const onSubmit = data => {
+        setLoading(true);
+        setPage(1);
+        setError(null);
         console.log(data);
-        fetchMovies(data).then(movies => setMovies(movies));
+        FetchMovies(data)
+            .then(movies => {
+            setMovies(movies);
+            setTotalPages(movies.total_pages);
+            setLoading(false);
+            })
+            .catch(error => {
+            setError(error);
+            setLoading(false);
+            });
     };
     
 
-    console.log(watch("example")); // watch input value by passing the name of it
 
     return (
-        /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <label>Name</label>
-            <input type="text" {...register("name")} />
-            <label>Email</label>
-            <input type="email" {...register("email", { required: true })} />
-            {errors.email && <span>This field is required</span>}
-            <select type="select" {...register("time")} >
+        <form className="flex flex-col gap-5" onSubmit={handleSubmit(onSubmit)}>
+            <select className="select select-bordered w-full " type="select" {...register("time")} >
                 <option value="60">Less than 60 minutes</option>
                 <option value="120">Up to 2 hours</option>
                 <option value="400">Over 2 hours</option>
             </select>
-            <select type="select" {...register("moviecertificate")} >
+            <select className="select select-bordered w-full " type="select" {...register("moviecertificate")} >
                 <option value="U">U</option>
                 <option value="PG">PG</option>
                 <option value="12A">12A</option>
                 <option value="15">15</option>
                 <option value="18">18</option>
             </select>
-            <select type="select" {...register("genre")} >
+            <select className="select select-bordered w-full " type="select" {...register("genre")} >
                 <option value="28">Action</option>
                 <option value="12">Adventure</option>
                 <option value="16">Animation</option>
@@ -56,7 +60,9 @@ export default function Form() {
                 <option value="37">Western</option>
                 
             </select>
-            <input type="submit" />
+            <button className="btn p-4 bg-red-500 text-black" type="submit">{loading ? <span className="loading loading-spinner loading-sm text-black"></span>
+ : 'Find me a movie!'}
+            </button>
         </form>
     );
 }

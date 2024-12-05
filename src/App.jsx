@@ -9,14 +9,16 @@ function App() {
   return (
     <>
     <MovieProvider>
+      <div className="app-container">
       <Header />
-      <div className="form-container">
+      <div className="form-container max-w-screen-md m-auto p-10 rounded-sm">
         <Form  />
       </div>
       <div className="movies-container">
         <Recommendations />
       </div>
       <Footer />
+      </div>
       </MovieProvider>
     </>
   );
