@@ -1,7 +1,11 @@
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div>
+        <footer>
+            <p>Created by Robin, David and Will</p>
+            </footer>
+    </div>
   )
 }
 
