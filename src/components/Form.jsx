@@ -30,7 +30,7 @@ export default function Form() {
             <select className="select select-bordered w-full " type="select" {...register("time")} >
                 <option value="60">Less than 60 minutes</option>
                 <option value="120">Up to 2 hours</option>
-                <option value="400">Over 2 hours</option>
+                <option value="400">No max time</option>
             </select>
             <select className="select select-bordered w-full " type="select" {...register("moviecertificate")} >
                 <option value="U">U</option>
