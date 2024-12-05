@@ -1,6 +1,6 @@
-
 function Header() {
   return (
+
     <div className="navbar bg-base-100">
 
   <a href="/" className="text-xl flex">
@@ -8,6 +8,7 @@ function Header() {
     <h1>Christmas Movie Picker</h1></a>
 </div>
   )
+
 }
 
-export default Header
+export default Header;
