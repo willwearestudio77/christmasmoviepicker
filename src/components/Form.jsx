@@ -4,15 +4,18 @@ import { MovieContext } from "./State";
 import FetchMovies from "../functions/Searcher";
 export default function Form() {
     const { register, handleSubmit } = useForm();
-    const { setMovies,setLoading,loading,setPage,setError,error,totalPages,setTotalPages } = useContext(MovieContext);
+    const { setMovies,setLoading,loading,setPage,setError,setTotalPages,page,request,setRequest } = useContext(MovieContext);
 
-    const onSubmit = data => {
+    const onSubmit = (data) => {
+        console.log(data);
+        setRequest(data);
         setLoading(true);
         setPage(1);
         setError(null);
         console.log(data);
-        FetchMovies(data)
+        FetchMovies(data,page)
             .then(movies => {
+                console.log(request);
             setMovies(movies);
             setTotalPages(movies.total_pages);
             setLoading(false);
@@ -30,7 +33,7 @@ export default function Form() {
             <select className="select select-bordered w-full " type="select" {...register("time")} >
                 <option value="60">Less than 60 minutes</option>
                 <option value="120">Up to 2 hours</option>
-                <option value="400">Over 2 hours</option>
+                <option value="400">No max time</option>
             </select>
             <select className="select select-bordered w-full " type="select" {...register("moviecertificate")} >
                 <option value="U">U</option>
