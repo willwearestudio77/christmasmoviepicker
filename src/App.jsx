@@ -1,4 +1,5 @@
 import "./App.css";
+<<<<<<< HEAD
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Form from "./components/Form";
@@ -33,6 +34,27 @@ function App() {
         )}
       </div>
       <Footer />
+=======
+import Footer from "./components/Footer";
+import Form from "./components/Form";
+import Header from "./components/Header";
+import { MovieProvider } from "./components/State";
+import Recommendations from "./components/Recommendations";
+function App() {
+  return (
+    <>
+      <MovieProvider>
+        <Header />
+        <div className="form-container">
+          <Form />
+        </div>
+        <div className="movies-container">
+          {/* <Movies /> */}
+          <Recommendations />
+        </div>
+        <Footer />
+      </MovieProvider>
+>>>>>>> 01f55f07972c4f47f77457b0bdfd9a062d99d0f5
     </>
   );
 }

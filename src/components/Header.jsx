@@ -1,8 +1,9 @@
 function Header() {
   return (
-  <div>
+    <div>
       <h1>Christmas Movie Picker</h1>
-  </div>
+      {/* <Button variant="contained">RECCOMENDATIONS</Button> */}
+    </div>
   );
 }
 
