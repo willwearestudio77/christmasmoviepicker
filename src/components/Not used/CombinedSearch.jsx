@@ -39,25 +39,25 @@ const CombinedSearch = () => {
     }
   };
 
-  //   return (
-  //     <div>
-  //       <h1>Movie Picker</h1>
-  //       <ApiCall onGenreChange={setSelectedGenre} />
-  //       <Age onAgeChange={setAgeRating} />
-  //       <Time onRuntimeChange={setRuntime} />
-  //       <button onClick={handleSearch}>Search</button>
+  return (
+    <div>
+      <h1>Movie Picker</h1>
+      <ApiCall onGenreChange={setSelectedGenre} />
+      <Age onAgeChange={setAgeRating} />
+      <Time onRuntimeChange={setRuntime} />
+      <button onClick={handleSearch}>Search</button>
 
-  //       {movies.length > 0 && (
-  //         <ul>
-  //           {movies.map((movie) => (
-  //             <li key={movie.id}>
-  //               {movie.title} - {movie.release_date || "Unknown Release Date"}
-  //             </li>
-  //           ))}
-  //         </ul>
-  //       )}
-  //     </div>
-  //   );
+      {movies.length > 0 && (
+        <ul>
+          {movies.map((movie) => (
+            <li key={movie.id}>
+              {movie.title} - {movie.release_date || "Unknown Release Date"}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 };
 
 export default CombinedSearch;
