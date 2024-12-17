@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 
 Robin
 # christmas-movie-picker
+# christmas-movie-picker
